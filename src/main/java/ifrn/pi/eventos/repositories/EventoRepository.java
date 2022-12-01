@@ -1,4 +1,4 @@
-package ifrn.pi.eventos.controllers;
+package ifrn.pi.eventos.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
