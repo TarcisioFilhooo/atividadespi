@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import ifrn.pi.eventos.models.Evento;
+import ifrn.pi.eventos.repositories.EventoRepository;
 
 @Controller
 public class EventosController {
@@ -15,7 +16,7 @@ public class EventosController {
 	
 	@RequestMapping("/eventos/form")
 	public String form() {
-		return "formEvento";
+		return "eventos/formEvento";
 	}
 	
 	@PostMapping("/eventos")
@@ -24,7 +25,7 @@ public class EventosController {
 		System.out.println(evento);
 		er.save(evento);
 		
-		return "evento-adicionado";
+		return "eventos/evento-adicionado";
 	}
 	
 }
